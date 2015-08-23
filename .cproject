@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="0.1852692907">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1852692907" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="Build for Z1 Platform" id="0.1852692907" name="Default" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="0.1852692907." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.1194908639" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.1138943469" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
+							<builder buildPath="${workspace_loc:/Alarm}/Default" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1422189631" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.339372946" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
+								<option id="gnu.both.asm.option.include.paths.633454034" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master\dev&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1422863463" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.950604682" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.1434170470" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.580676841" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
+								<option id="gnu.c.compiler.option.include.paths.1164916927" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1213596234" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.1499344946" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base">
+								<option id="gnu.c.link.option.libs.1598299690" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+								</option>
+								<option id="gnu.c.link.option.paths.1298176222" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1041281277" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1630570537" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="0.1852692907.1494195744" name="alarm.c" rcbsApplicability="disable" resourcePath="alarm.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.base.256341106">
+						<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.256341106" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
+							<option id="gnu.c.compiler.option.include.paths.1769702627" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+							</option>
+							<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1883355196" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+						</tool>
+					</fileInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="0.1852692907.728937110">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1852692907.728937110" moduleId="org.eclipse.cdt.core.settings" name="Upload">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="Build and Upload the binary to a z1 mote" id="0.1852692907.728937110" name="Upload" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="0.1852692907.728937110." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1769010164" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1769010164.1211959263" name=""/>
+							<builder arguments="TARGET=z1 alarm.upload -lm" command="make" id="org.eclipse.cdt.build.core.settings.default.builder.1513250159" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1657266969" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.686507249" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.878539876" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/z1/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/net/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/include/"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1566831649" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1447329433" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1435254852" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/z1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/net/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/include/"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.853766060" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.272516694" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.995016290" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/z1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/net/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/include/"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1694707428" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="0.1852692907.728937110.1036330399" name="alarm.c" rcbsApplicability="disable" resourcePath="alarm.c" toolsToInvoke="org.eclipse.cdt.build.core.settings.holder.272516694.508634619">
+						<tool id="org.eclipse.cdt.build.core.settings.holder.272516694.508634619" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder.686507249">
+							<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.254827593" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+								<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/z1&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/net/&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/&quot;"/>
+								<listOptionValue builtIn="false" value="/usr/include/"/>
+								<listOptionValue builtIn="false" value="&quot;${HOME}/&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\workspace\contiki-master&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;C:\Users\Filippo\Desktop\eclipse&quot;"/>
+							</option>
+							<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.2121254907" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+						</tool>
+					</fileInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Alarm.null.1617667797" name="Alarm"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/Alarm"/>
+		</configuration>
+		<configuration configurationName="Upload"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="0.1852692907.728937110">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.1852692907;0.1852692907.;cdt.managedbuild.tool.gnu.c.compiler.mingw.base.580676841;cdt.managedbuild.tool.gnu.c.compiler.input.1213596234">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.1852692907">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>
