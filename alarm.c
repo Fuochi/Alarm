@@ -253,7 +253,7 @@ static void unicast_recv(struct unicast_conn *c, const linkaddr_t *from) {
     } else {
         switch (*((uint8_t*) packetbuf_dataptr() + PACKAGE_TYPE_INDEX)) {
         case UNI_CONFIG:
-            //ToDo: ...
+            //ToDo: prova
             break;
         case UNI_SEARCH:
             ;			// Modify the package inside the buffer and send UNI_ALIVE back
