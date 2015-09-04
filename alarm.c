@@ -61,6 +61,8 @@ static volatile uint8_t flooding_rx_flag = 0;
 static volatile uint8_t uni_rx_flag = 0;
 static uint8_t unicast_tryCounter = 0;
 static uint8_t routingTable[ALARM_MOTE_COUNT][ROUTINGTABLE_SECOND_DIMENSION]; //Sum + Found + Hops + Path
+#else
+static int sensor = SENSOR_TYPE ;
 #endif
 
 // Callback-Functions
@@ -73,6 +75,7 @@ typedef struct package {
     uint8_t type;
     uint8_t data[ALARM_MOTE_COUNT + 1];
 } Package;
+
 
 static Package package = { 0, 0, 0, { 0 } };
 static uint8_t msg_id_array[ALARM_MOTE_COUNT + 2] = { 0 }; /* Zero not used (MOTE-ID as Index) */
@@ -253,7 +256,10 @@ static void unicast_recv(struct unicast_conn *c, const linkaddr_t *from) {
     } else {
         switch (*((uint8_t*) packetbuf_dataptr() + PACKAGE_TYPE_INDEX)) {
         case UNI_CONFIG:
-            //ToDo: prova
+        	;           // Modify the value of the sensor and reinitialize
+        	sensor = (*((uint8_t*) packetbuf_dataptr() + SOURCE_ID_INDEX));
+        	DistanceSensor_init(sensor);
+
             break;
         case UNI_SEARCH:
             ;			// Modify the package inside the buffer and send UNI_ALIVE back
@@ -342,14 +348,14 @@ PROCESS_THREAD(example_broadcast_process, ev, data) {
         uint16_t nbytes = ALARM_MOTE_COUNT * (ALARM_MOTE_COUNT + 2);
         memset(&routingTable, 0, nbytes);
 #else
-        DistanceSensor_init(SENSOR_TYPE);
+        DistanceSensor_init(sensor);
 #endif
 
         while (1) {
 
 #ifdef ALARM_MOTE
             // Check for Movement --> Alarm
-            if (SENSOR_TYPE != NO_SENSOR && DistanceSensor_MovementDetected()) {
+            if (sensor != NO_SENSOR && DistanceSensor_MovementDetected()) {
                 // Alarm triggered! --> Calculate Distance, Generate Alarm-Package and Send it
                 uint16_t distance_cm = DistanceSensor_getDistance_cm();
                 leds_on(LEDS_BLUE);
@@ -358,7 +364,7 @@ PROCESS_THREAD(example_broadcast_process, ev, data) {
                 package.source_id = MOTE_ID;
                 package.type = FLOODING_ALARM;
                 *((uint8_t*) &package + MSG_ID_INDEX) = ++msg_id_array[MOTE_ID];
-                *((uint8_t*) &package + FLOODING_SENSOR_INDEX) = SENSOR_TYPE;
+                *((uint8_t*) &package + FLOODING_SENSOR_INDEX) = sensor;
                 *((uint8_t*) &package + FLOODING_DISTANCE_H_INDEX) = (uint8_t) (distance_cm >> 8);
                 *((uint8_t*) &package + FLOODING_DISTANCE_L_INDEX) = (uint8_t) (distance_cm & 0xFF);
                 packetbuf_copyfrom(&package, ALARM_PACKAGE_LEN);
