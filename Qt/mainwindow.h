@@ -33,9 +33,6 @@ private:
     QMessageBox error;
 
 private slots:
-
-
-private slots:
     void on_pushButton_close_clicked();
     void on_pushButton_open_clicked();
     void on_pushButton_Sens_1_clicked();

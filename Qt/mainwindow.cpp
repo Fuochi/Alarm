@@ -8,12 +8,17 @@
 QStandardItemModel *model;
 QStandardItem *firstRow;
 int alarm[6]={0};
+QPalette* palette_red = new QPalette();
+QPalette* palette_green = new QPalette();
+int open[6]={1,2,3,4,5,6};
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    palette_red->setColor(QPalette::Button,Qt::red);
+    palette_green->setColor(QPalette::Button,Qt::red);
 
     // Get all available COM Ports and store them in a QList.
     QList<QextPortInfo> ports = QextSerialEnumerator::getPorts();
@@ -29,7 +34,6 @@ MainWindow::MainWindow(QWidget *parent) :
     if (ui->comboBox_Interface->count() == 0){
         ui->textEdit_Status->insertPlainText("No USB ports available.\nConnect a USB device and try again.");
     }
-
     // Init Tableview
     model = new QStandardItemModel(6,5,this); //6 Rows and 5 Columns
     model->setHorizontalHeaderItem(0, new QStandardItem(QString("MOTE-ID")));
@@ -46,7 +50,6 @@ MainWindow::MainWindow(QWidget *parent) :
         model->setItem(i,0,firstRow);
         firstRow = new QStandardItem(QString("0"));
         model->setItem(i,1,firstRow);
-
     }
 }
 
@@ -123,56 +126,117 @@ void MainWindow::on_pushButton_open_clicked()
     ui->comboBox_Interface->setEnabled(false);
 }
 
-void MainWindow::on_pushButton_Sens_1_clicked()
+void MainWindow::on_pushButton_close_clicked()
 {
-    if()
+    if (port.isOpen())port.close();
+    ui->pushButton_close->setEnabled(false);
+    ui->pushButton_open->setEnabled(true);
+    ui->comboBox_Interface->setEnabled(true);
+}
+
+void MainWindow::on_pushButton_Sens_1_clicked()
+{ QObject::connect(&port, SIGNAL(open[0]), this, SLOT(transmit(int)));
+    if(open[0]==101)
+    {
+    ui->pushButton_Sens_1->setPalette(*palette_green);
     port.write("ID 1 SENSOR ON");
+    open[0]=1;
+    }
     else
-    port.write("ID 1 SENSOR OFF");
+    {
+     ui->pushButton_Sens_1->setPalette(*palette_red);
+     port.write("ID 1 SENSOR OFF");
+     open[0]=101;
+    }
 }
 
 void MainWindow::on_pushButton_Sens_2_clicked()
 {
-    if()
-    port.write("ID 2 SENSOR ON");
-    else
-    port.write("ID 2 SENSOR OFF");
+    QObject::connect(&port, SIGNAL(open[1]), this, SLOT(transmit(int)));
+        if(open[1]==102)
+        {
+        ui->pushButton_Sens_1->setPalette(*palette_green);
+        port.write("ID 1 SENSOR ON");
+        open[1]=2;
+        }
+        else
+        {
+         ui->pushButton_Sens_1->setPalette(*palette_red);
+         port.write("ID 1 SENSOR OFF");
+         open[1]=102;
+        }
 }
 
 
 void MainWindow::on_pushButton_Sens_3_clicked()
 {
-    if()
-    port.write("ID 3 SENSOR ON");
-    else
-    port.write("ID 3 SENSOR OFF");
+    QObject::connect(&port, SIGNAL(open[2]), this, SLOT(transmit(int)));
+        if(open[2]==103)
+        {
+        ui->pushButton_Sens_1->setPalette(*palette_green);
+        port.write("ID 1 SENSOR ON");
+        open[2]=3;
+        }
+        else
+        {
+         ui->pushButton_Sens_1->setPalette(*palette_red);
+         port.write("ID 1 SENSOR OFF");
+         open[2]=103;
+        }
 }
 
 
 void MainWindow::on_pushButton_Sens_4_clicked()
 {
-    if()
-    port.write("ID 4 SENSOR ON");
-    else
-    port.write("ID 4 SENSOR OFF");
+    QObject::connect(&port, SIGNAL(open[3]), this, SLOT(transmit(int)));
+        if(open[3]==104)
+        {
+        ui->pushButton_Sens_1->setPalette(*palette_green);
+        port.write("ID 1 SENSOR ON");
+        open[3]=4;
+        }
+        else
+        {
+         ui->pushButton_Sens_1->setPalette(*palette_red);
+         port.write("ID 1 SENSOR OFF");
+         open[3]=104;
+        }
 }
 
 
 void MainWindow::on_pushButton_Sens_5_clicked()
 {
-    if()
-    port.write("ID 5 SENSOR ON");
-    else
-    port.write("ID 5 SENSOR OFF");
+    QObject::connect(&port, SIGNAL(open[4]), this, SLOT(transmit(int)));
+        if(open[4]==105)
+        {
+        ui->pushButton_Sens_1->setPalette(*palette_green);
+        port.write("ID 1 SENSOR ON");
+        open[4]=5;
+        }
+        else
+        {
+         ui->pushButton_Sens_1->setPalette(*palette_red);
+         port.write("ID 1 SENSOR OFF");
+         open[4]=105;
+        }
 }
 
 
 void MainWindow::on_pushButton_Sens_6_clicked()
 {
-    if()
-    port.write("ID 6 SENSOR ON");
-    else
-    port.write("ID 6 SENSOR OFF");
+    QObject::connect(&port, SIGNAL(open[5]), this, SLOT(transmit(int)));
+        if(open[5]==106)
+        {
+        ui->pushButton_Sens_1->setPalette(*palette_green);
+        port.write("ID 1 SENSOR ON");
+        open[5]=6;
+        }
+        else
+        {
+         ui->pushButton_Sens_1->setPalette(*palette_red);
+         port.write("ID 1 SENSOR OFF");
+         open[5]=106;
+        }
 }
 
 
@@ -286,4 +350,9 @@ void MainWindow::receive()
                 str.clear();
             }
         }
+}
+void MainWindow::send()(int value)
+{char *buf; //creation of a buffer
+    *buf = value;
+      port->write(buf); //send the buffer
 }

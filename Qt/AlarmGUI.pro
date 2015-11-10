@@ -23,8 +23,7 @@ FORMS    += mainwindow.ui
 # This section will include QextSerialPort in
 # your project:
 
-HOMEDIR = $$(HOME)
-include($$HOMEDIR/qextserialport/src/qextserialport.pri)
+include(C:\Users\Filippo\workspace\qextserialport-master\src\qextserialport.pri)
 
 # Before running the project, run qmake first:
 # In Qt Creator, right-click on the project
