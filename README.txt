@@ -18,5 +18,5 @@ Qt-Package
 Byte    		0			1			2			3			4			5			6	
 Description		Mote-ID		ROUTE_OK	RSSI-SUM	Path ...					
 				Mote-ID		Distance-H	Distance-L
-				Mote-ID     Sensor      Config      Path ...
+				Mote-ID     ON/OFF
 
