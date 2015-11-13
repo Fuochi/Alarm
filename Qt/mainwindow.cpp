@@ -66,6 +66,7 @@ void setRowYellow(int row, int column){
     model->setData(model->index(row, column), (QColor(Qt::yellow)), Qt::BackgroundRole);
 }
 
+
 // Delete Alarm (Change Color Depending on Routing-State)
 void resetTable(){
 int i=0;
@@ -122,13 +123,60 @@ void MainWindow::on_pushButton_open_clicked()
     ui->comboBox_Interface->setEnabled(false);
 }
 
-void MainWindow::on_pushButton_close_clicked()
+void MainWindow::on_pushButton_Sens_1_clicked()
 {
-    if (port.isOpen())port.close();
-    ui->pushButton_close->setEnabled(false);
-    ui->pushButton_open->setEnabled(true);
-    ui->comboBox_Interface->setEnabled(true);
+    if()
+    port.write("ID 1 SENSOR ON");
+    else
+    port.write("ID 1 SENSOR OFF");
 }
+
+void MainWindow::on_pushButton_Sens_2_clicked()
+{
+    if()
+    port.write("ID 2 SENSOR ON");
+    else
+    port.write("ID 2 SENSOR OFF");
+}
+
+
+void MainWindow::on_pushButton_Sens_3_clicked()
+{
+    if()
+    port.write("ID 3 SENSOR ON");
+    else
+    port.write("ID 3 SENSOR OFF");
+}
+
+
+void MainWindow::on_pushButton_Sens_4_clicked()
+{
+    if()
+    port.write("ID 4 SENSOR ON");
+    else
+    port.write("ID 4 SENSOR OFF");
+}
+
+
+void MainWindow::on_pushButton_Sens_5_clicked()
+{
+    if()
+    port.write("ID 5 SENSOR ON");
+    else
+    port.write("ID 5 SENSOR OFF");
+}
+
+
+void MainWindow::on_pushButton_Sens_6_clicked()
+{
+    if()
+    port.write("ID 6 SENSOR ON");
+    else
+    port.write("ID 6 SENSOR OFF");
+}
+
+
+
 
 void MainWindow::on_btn_clearText_clicked()
 {
