@@ -28,7 +28,7 @@
 // Standard C includes:
 #include <stdio.h>                    // For printf.
 #include <stdlib.h>                   // Abs()
-#include "stdint.h"
+#include <stdint.h>
 #include "distanceSensors.h"
 #include "defines.h"
 
@@ -308,7 +308,7 @@ static void unicast_recv(struct unicast_conn *c, const linkaddr_t *from) {
 }
 
 //--------------------- PROCESS CONTROL BLOCK ---------------------
-PROCESS(example_broadcast_process, "Alarm");
+PROCESS(example_broadcast_process, "alarm");
 AUTOSTART_PROCESSES(&example_broadcast_process);
 
 //------------------------ PROCESS' THREAD ------------------------
